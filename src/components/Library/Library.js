@@ -1,26 +1,21 @@
 import React from 'react';
-import Song from '../Song/Song';   // Se importa el componente funcional Song
-import './Library.css';     // Se importan los estilos para el componente
+import Song from '../Song/Song';
+import './styles.css';
 
-
-// Se reciben las canciones que están en la biblioteca
 const Library = ({ songs }) => {
   return (
-    <div className="library">    {/* Se crea un contenedor */}
+    <div className="library">
       <h2>Mi Biblioteca</h2>
-
-{/* Si la biblioteca está vacía, se muestra un mensaje */}
       {songs.length === 0 ? (
-        <p>Aún no has agregado canciones.</p>
+        <p>No has agregado canciones aún.</p>
       ) : (
-        // Si hay canciones, se muestran
         songs.map((song, index) => (
-          <Song
+          <Song 
             key={index}
-            title={song.title}
-            artist={song.artist}
-            duration={song.duration}
-            isInLibrary={true}    // Se indica que ya está en la biblioteca
+            id={song.idAlbum}
+            title={song.strAlbum}
+            artist={song.strArtist}
+            duration="N/A"
           />
         ))
       )}
@@ -28,4 +23,4 @@ const Library = ({ songs }) => {
   );
 };
 
-export default Library;   // Se exporta el componente
+export default Library;

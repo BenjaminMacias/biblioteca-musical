@@ -1,12 +1,12 @@
-import React from 'react'; // se importa React para poder usar JSX
-import './Header.css'; // se importa estilos para este componente
+import React from 'react';
+import './styles.css';
 
-const Header = () => { // Se declara el componente Header como una función
+const Header = () => {
   return (
-    <header>    {/* elemento HTML para encabezado*/}
-      <h1>🎵 Mi Biblioteca Musical 🎵</h1>  {/* Título de la aplicación */}
+    <header className="header">
+      <h1>My Music Library</h1>
     </header>
   );
 };
 
-export default Header;   // Se exporta el componente para usarlo en App.js
+export default Header;

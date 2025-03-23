@@ -1,23 +1,20 @@
 import React from 'react';
-import './Song.css';   // se importa los estilos para Song
+import { Link } from 'react-router-dom';
+import './styles.css';
 
-
-// Se define el componente y se desestructuran las props: título, artista, duración, onAdd y si ya está en la biblioteca
-const Song = ({ title, artist, duration, onAdd, isInLibrary }) => {
+const Song = ({ id, title, artist, duration, onAdd }) => {
   return (
-    <div className="song">   {/* Se crea un contenedor con clase CSS */}
-      <h2>{title}</h2>      {/* Se muestra el título */}
-      <p>Artista: {artist}</p>     {/* Se muestra el artista */}
-      <p>Duración: {duration}</p>   {/* Se muestra la duración */}
-
-{/* Si existe la función onAdd y la canción no está en la biblioteca, se muestra el botón */}
-      {onAdd && !isInLibrary && (
-        <button onClick={onAdd}>Agregar a mi biblioteca</button>
+    <div className="song">
+      <h3>
+      {id ? <Link to={`/song/${id}`}>{title}</Link> : title} {/* Solo el título es clickeable */}
+        </h3>
+      <p>Artist: {artist}</p>
+      <p>Duration: {duration}</p>
+      {onAdd && (
+        <button className="add-button" onClick={onAdd}>Agregar a mi biblioteca</button>
       )}
-{/* Si ya está en la biblioteca, mostramos el texto correspondiente */}
-      {isInLibrary && <p className="in-library">Ya está en tu biblioteca</p>}
     </div>
   );
 };
 
-export default Song;  // se exporta el componente
+export default Song;

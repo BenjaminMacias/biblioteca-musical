@@ -1,0 +1,11 @@
+.library {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .library h2 {
+    text-align: center;
+    color: #333;
+  }

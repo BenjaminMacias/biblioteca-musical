@@ -1,0 +1,11 @@
+.search-results {
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+  }
+  
+  .search-results h2 {
+    text-align: center;
+    color: #333;
+  }
