@@ -1,3 +1,64 @@
+# 📚 Biblioteca Musical
+
+Aplicación web para explorar, buscar y gestionar una pequeña biblioteca de canciones. Permite filtrar por **artista**, **género**, buscar por **título**, marcar **favoritos** y (opcional) crear pequeñas **listas** usando almacenamiento local del navegador.
+
+## 🚀 Tecnologías utilizadas
+- **HTML5** — estructura semántica
+- **CSS3** — layout con Flexbox / Grid
+- **JavaScript (ES6+)** — lógica de la app
+- **LocalStorage** — persistencia ligera en el navegador (opcional)
+
+## ⚙️ Instalación y uso
+
+> La app es estática. Puedes abrir `index.html` directamente o servirla con un servidor local.
+
+**Opción A: abrir el archivo**
+1. Clona el repo  
+   ```bash
+   git clone https://github.com/BenjaminMacias/biblioteca-musical.git
+   cd biblioteca-musical
+Abre index.html en tu navegador (doble clic).
+
+Opción B: servidor local recomendado
+
+# con VSCode: usa la extensión Live Server
+# o con Node:
+npx serve .
+# luego abre la URL que aparezca (p. ej. http://localhost:3000)
+🧭 Uso
+Barra de búsqueda: escribe el título o parte del mismo.
+
+Filtros: selecciona género/artista desde los controles.
+
+Favoritos: pulsa el icono ⭐ para guardar en tu lista.
+
+Agregar canción (si está disponible en el UI): completa el formulario y guarda.
+
+🧱 Estructura de datos (ejemplo)
+{
+  "id": "trk_001",
+  "title": "Bad Habit",
+  "artist": "Steve Lacy",
+  "album": "Gemini Rights",
+  "genre": "R&B",
+  "year": 2022,
+  "duration": 235,
+  "cover": "assets/covers/gemini-rights.jpg",
+  "favorite": false
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
